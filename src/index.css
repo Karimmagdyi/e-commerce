@@ -123,8 +123,20 @@ a , a:hover{
 .mt-70{
 margin-top: -70px!important;
 }
-
-@media screen and (max-width: 576px) {
+@media screen and (min-width:316px) and (max-width:430px) {
+.iconss{
+    margin-left: 140px !important;
+    margin-top: -47px;
+}
+.product{
+    
+    
+}
+.logout{
+    
+}
+}
+@media screen and(min-width:431px) and (max-width: 576px) {
     .category h3{
       font-size: 8px;
     }

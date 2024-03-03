@@ -57,9 +57,7 @@ export default function Navbar() {
              
             </>
               : ''}
-              {localStorage.getItem('tkn')!==null?  <li className="nav-item list-unstyled ms-3 logout">
-                <span onClick={Logout} role='button' className="nav-link">logout</span>
-              </li>:''}
+          
         </div>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           {localStorage.getItem('tkn') != null ? <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
@@ -80,10 +78,10 @@ export default function Navbar() {
               <NavLink className="nav-link" to="/allorders">allorders</NavLink>
             </li>
           </ul> : ''}
-          </div>
+          
          
 
-          <ul className="navbar-nav ms-auto mb-2 mb-lg-0 list-unstyled  mx-5 ">
+          
         
 
 
@@ -95,11 +93,15 @@ export default function Navbar() {
                 <NavLink className="nav-link" to="/login">login</NavLink>
               </li></> : ''}
             </div>
+            {localStorage.getItem('tkn')!==null?  <li className="nav-item list-unstyled ms-3 logout">
+                <span onClick={Logout} role='button' className="nav-link">logout</span>
+              </li>:''}
              
            
 
             
-          </ul>
+          {/* </ul> */}
+          </div>
       </div>
       
     </nav>
