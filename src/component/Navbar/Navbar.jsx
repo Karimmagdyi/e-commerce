@@ -58,7 +58,7 @@ export default function Navbar() {
                     </span>
                   </Link>
                 </li>
-              ) :  <li className="nav-item position-relative">
+              ) :  <li className="nav-item position-relative list-unstyledigt">
               <Link className="nav-link" to="/cart">
                 <i className="fa-solid fa-cart-shopping fa-xl "></i></Link></li>
             ) : (
