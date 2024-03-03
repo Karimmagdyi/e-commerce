@@ -85,17 +85,20 @@ export default function Navbar() {
         
 
 
-            <div className="d-flex ">
-            {localStorage.getItem('tkn') == null ? <>  <li className="nav-item mx-3">
+              <ul>
+            <div className="d-flex intro ">
+
+            {localStorage.getItem('tkn') == null ? <>  <li className="nav-item mx-3 list-unstyled">
               <NavLink className="nav-link" to="/register">register</NavLink>
             </li>
-              <li className="nav-item">
+              <li className="nav-item list-unstyled">
                 <NavLink className="nav-link" to="/login">login</NavLink>
               </li></> : ''}
             </div>
             {localStorage.getItem('tkn')!==null?  <li className="nav-item list-unstyled ms-3 logout">
                 <span onClick={Logout} role='button' className="nav-link">logout</span>
               </li>:''}
+              </ul>
              
            
 

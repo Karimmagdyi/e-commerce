@@ -169,12 +169,13 @@ margin-top: -70px!important;
         margin-left: 150px !important ;
         padding-inline: 20px;
     }
+}
     @media screen and (min-width:577px) and (max-width:715px) {
         .iconss{
             margin-left:  200px ;
         }
     }
-  }
+  
   @media screen and (min-width:716px) and (max-width:786px) {
 
      .category h3{
