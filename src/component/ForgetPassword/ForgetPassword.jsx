@@ -23,7 +23,7 @@ axios.post('https://ecommerce.routemisr.com/api/v1/auth/forgotPasswords',email)
 
   return <>
   
-  <div className="w-50 mx-auto mt-90">
+  <div className="w-50 mx-auto m-200">
     <input className='form-control' type="email" name="email" id="email" placeholder='enter your email' />
   </div>
     <div className="d-flex justify-content-center align-items-center">

@@ -114,34 +114,56 @@ a , a:hover{
     width: 150px;
 }
 .m-200{
-    margin-block: 120px !important;
+    margin-top: 150px !important;
 }
 .wish-pro{
     border-bottom: 8px solid #fff;
     
 }
+.mt-70{
+margin-top: -70px!important;
+}
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 576px) {
     .category h3{
-      font-size: 10px;
+      font-size: 8px;
     }
     .category{
-        padding-inline: 10px;
+        /* padding-inline: 20px; */
     }
     .wish{
-       padding-left: 0px;
-       margin-top: -50px;
+      
+       /* margin-top: -60px; */
+       
     }
     .cart{
-        margin-left: 80px;
-        margin-top: -80px;
-    }
+        
+       
+        /* margin-top: 0px;
+        margin-left: 20px; */
+    } 
     .footer-btn{
         margin-top: 20px; 
     }
-    
+    .logout{
+        /* margin-top: -70px;
+        margin-left: 220px; */
+        /* margin-right: 20px; */
+    }
+    .iconss{
+        /* margin-top: -200px; */
+        margin-top: -30px ;
+        display: inline-block;
+        margin-left: 150px !important ;
+        padding-inline: 20px;
+    }
+    @media screen and (min-width:577px) and (max-width:715px) {
+        .iconss{
+            margin-left:  200px ;
+        }
+    }
   }
-  @media screen and (max-width:900px) {
+  @media screen and (min-width:716px) and (max-width:786px) {
 
      .category h3{
       font-size: 12px;
@@ -150,14 +172,24 @@ a , a:hover{
         padding-inline: 10px;
     }
     .wish{
-       padding-left: 30px;
+       /* padding-left: 30px; */
     }
     .cart{
-        padding-left: 200px;
+        /* padding-left: 200px; */
+        margin-top: -8px;
     }
 
     .footer-btn{
         margin-top: 20px; 
     }
+    .iconss{
+        margin-left: 300px  ;
+    }
     
   }
+  
+@media screen and (min-width:787px) and ( max-width: 850px){
+    .iconss{
+margin-left: 300px  ;
+    }
+}

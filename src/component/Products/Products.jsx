@@ -69,7 +69,7 @@ console.log('wishlist pro',wishlist);
 
     <div className="container mt-60">
       <div className="row gy-5">
-        {data?.data.data.map((product, index) => <div key={index} className="col-md-3">
+        {data?.data.data.map((product, index) => <div key={index} className="col-sm-6 col-md-3">
           <div className="product position-relative">
             {isProductInWishlist(product._id)?<div className="wishlist">
             <i role='button' onClick={()=>{removeWish(product._id)}} className="fa-solid fa-heart fa-xl"style={{color:'red'}} ></i>

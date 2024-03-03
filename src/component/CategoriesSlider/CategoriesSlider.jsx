@@ -35,7 +35,7 @@ export default function CategoriesSlider() {
                    <Link to={`/CategoriesDetails/${item._id}`}>
                      <div key={index} className="category my-5">
                             <img className='w-75 rounded-circle' height='100' src={item.image} alt="" />
-                            <h3 className="h4 text-center">{item.name}</h3>
+                            <h3 className="h4 text-center h6">{item.name}</h3>
                         </div>
                    </Link>
                    
