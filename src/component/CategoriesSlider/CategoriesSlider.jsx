@@ -21,7 +21,33 @@ export default function CategoriesSlider() {
         speed: 500,
         slidesToShow: 7,
         slidesToScroll: 1,
-        autoplay:true
+        autoplay:true,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 6,
+                slidesToScroll: 6,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                initialSlide: 4
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll:3
+              }
+            }
+          ]
     };
     // if (isLoading) {
     //     return <Loading />
@@ -33,7 +59,7 @@ export default function CategoriesSlider() {
             
                     {data?.data.data.map((item,index) =>
                    <Link to={`/CategoriesDetails/${item._id}`}>
-                     <div key={index} className="category my-5">
+                     <div key={index} className="category text-center my-5">
                             <img className='w-75 rounded-circle' height='100' src={item.image} alt="" />
                             <h3 className="h4 text-center h6">{item.name}</h3>
                         </div>
