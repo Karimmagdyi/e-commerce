@@ -116,3 +116,48 @@ a , a:hover{
 .m-200{
     margin-block: 120px !important;
 }
+.wish-pro{
+    border-bottom: 8px solid #fff;
+    
+}
+
+@media screen and (max-width: 600px) {
+    .category h3{
+      font-size: 10px;
+    }
+    .category{
+        padding-inline: 10px;
+    }
+    .wish{
+       padding-left: 0px;
+       margin-top: -50px;
+    }
+    .cart{
+        margin-left: 80px;
+        margin-top: -80px;
+    }
+    .footer-btn{
+        margin-top: 20px; 
+    }
+    
+  }
+  @media screen and (max-width:900px) {
+
+     .category h3{
+      font-size: 12px;
+    }
+    .category{
+        padding-inline: 10px;
+    }
+    .wish{
+       padding-left: 30px;
+    }
+    .cart{
+        padding-left: 200px;
+    }
+
+    .footer-btn{
+        margin-top: 20px; 
+    }
+    
+  }

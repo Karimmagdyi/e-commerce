@@ -50,8 +50,8 @@ if(!wishlist.data){
   </div>
  
  </div>
-    {wishlist.data.map((items,idx)=> <div key={idx} className="row align-items-center">
-    <div className="col-1">
+    {wishlist.data.map((items,idx)=> <div key={idx} className="row  gy-5 wish-pro align-items-center">
+    <div className="col-2">
     <figure>
       <img className='w-100' src={items.imageCover} alt="" />
     </figure>

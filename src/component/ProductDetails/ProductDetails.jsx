@@ -62,7 +62,7 @@ var settings = {
 </Slider>
         </div> }
         <div className="col-md-9">
-            <div className="details">
+            <div className="details mt-5">
               {console.log(product)}
                 <h1>{product.title}</h1>
                 <p>{product.description}</p>

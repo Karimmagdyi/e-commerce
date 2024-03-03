@@ -23,7 +23,7 @@ export default function MainSlider() {
         
             <div className="row mt-3">
                 
-                    <div className="col-md-9">
+                    <div className="col-md-12">
                     <Slider {...settings}>
                         <div>
                             <img className="w-100" height={'300px'} src={require('../../images/slider-image-1.jpeg')} alt="" />
@@ -36,10 +36,10 @@ export default function MainSlider() {
                         </div>
                 </Slider>
                     </div>
-                <div className="col-md-3">
+                {/* <div className="col-md-3">
                  <div><img className="w-100" height={'150px'} src={require('../../images/grocery-banner.png')} alt="" /> </div>   
                  <div><img className="w-100" height={'150px'} src={require('../../images/grocery-banner-2.jpeg')} alt="" /> </div> 
-                </div>
+                </div> */}
             </div>
         
 </div>

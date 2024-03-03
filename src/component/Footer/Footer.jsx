@@ -8,9 +8,9 @@ export default function Footer() {
     <div className="container py-4">
     <h4 className='mt-3'>Get The Freshcart App </h4>
     <p className='text-muted'>we will send you a link,open it on your phone to download the app.</p>
-    <div className='d-flex'>
-    <input className='form-control w-75 mx-4' type="email" placeholder='Email' />
-      <button className='btn bg-main text-white px-4'> share app link</button>
+    <div className='d-flex flex-wrap justify-content-center'>
+    <input className='form-control w-75 mx-4 ' type="email" placeholder='Email' />
+      <button className='btn bg-main text-white px-4 footer-btn'> share app link</button>
     </div>
     <hr />
     <div className='d-flex justify-content-between'>

@@ -29,7 +29,7 @@ function getCategory(){
   return <>
     <div className="container mt-60">
       <div className="row">
-    {data?.data.data.map((product,index)=><div key={index} height='100' className="col-md-3">
+    {data?.data.data.map((product,index)=><div key={index} height='100' className=" col-sm-6 col-md-3">
       <Link to={`/CategoriesDetails/${product._id}`}>
       <div className="product">
               <img className='w-100' height='200' src={product.image} alt="" />

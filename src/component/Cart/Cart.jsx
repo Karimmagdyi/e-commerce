@@ -71,7 +71,7 @@ async function removeFromCart(productId){
 </div>
   </div>
   <div className="col-2">
-    <div className="icon">
+    <div className="icon ms-4">
     <Link to={'/OnlinePayment'}>
     <i className="fa-solid fa-credit-card fa-lg ms-6"></i>
     <button className='btn btn-outline-primary'>Debit/Credit Card</button>
@@ -79,19 +79,19 @@ async function removeFromCart(productId){
     </div>
   </div>
  </div>
-    {allProducts?.map((items,idx)=> <div key={idx} className="row align-items-center">
-    <div className="col-1">
+    {allProducts?.map((items,idx)=> <div key={idx} className="row wish-pro align-items-center">
+    <div className="col-2">
     <figure>
       <img className='w-100' src={items?.product.imageCover} alt="" />
     </figure>
     </div>
-    <div className="col-9">
+    <div className="col-8">
      <p>{items?.product.title}</p>
      <p className='text-main'>price: {items?.price}</p>
      <button onClick={()=>{removeFromCart(items.product._id)}} className='btn btn-outline-danger'>Remove</button>
     </div>
     <div className="col-2">
-     <div className=''>
+     <div className='d-flex'>
      <button onClick={()=>{update(items.product._id,items.count + 1)}} className='btn btn-outline-success'>+</button>
      <span className='mx-2'>{items?.count}</span>
      <button disabled={items.count==1} onClick={()=>{update(items.product._id,items.count - 1)}} className='btn btn-outline-success'>-</button>
