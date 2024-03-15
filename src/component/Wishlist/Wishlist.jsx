@@ -45,7 +45,7 @@ if(!wishlist.data){
  <div className="row">
   <div className="col-8">
 <div className="details">
-<h2>Shop Cart:</h2>
+<h2>Wishlist:</h2>
 </div>
   </div>
  

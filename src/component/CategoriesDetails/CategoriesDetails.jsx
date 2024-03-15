@@ -28,10 +28,10 @@ export default function CategoriesDetails() {
     if (isLoading) return <Loading />;
     const filtered= data?.data.data.filter(item => item.category._id === id)
     return <>
-    <div className="container">
+    <div className="container mt-90">
         <div className="row">
             
-        {filtered?.map((product,index)=>  <div key={index} className="col-md-3">
+        {filtered?.map((product,index)=>  <div key={index} className="col-6 col-md-3">
             <div className="product">
             <Link to={`/ProductDetails/${product._id}`}>
                 <img className='w-100' src={product.imageCover} alt="" />

@@ -21,7 +21,9 @@ export default function Navbar() {
     <nav className="navbar navbar-expand-lg bg-body-tertiary position-fixed top-0 end-0 start-0 mb-5 z-3 py-3">
       <div className="container-fluid">
         
+        <Link to={'/home'}>
         <img src={logo} alt="" />
+        </Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon" />
         </button>

@@ -59,8 +59,8 @@ export default function Register() {
   <div className="w-75 m-auto mt-5">
     <form onSubmit={myFormik.handleSubmit}>
 
-    <label htmlFor="name">Name:</label>
-    <input onBlur={myFormik.handleBlur} onChange={myFormik.handleChange} value={myFormik.values.name} type="text" name='name' className='form-control mb-3' placeholder='Name' />
+    <label className='mt-5' htmlFor="name">Name:</label>
+    <input onBlur={myFormik.handleBlur} onChange={myFormik.handleChange} value={myFormik.values.name} type="text" name='name' className='form-control mb-3 mt-2' placeholder='Name' />
      {myFormik.errors.name && myFormik.touched.name ? <div className="alert alert-danger">{myFormik.errors.name}</div> : ''}
 
     <label htmlFor="email">Email:</label>
