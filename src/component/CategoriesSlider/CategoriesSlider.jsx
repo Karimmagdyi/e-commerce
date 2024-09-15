@@ -4,7 +4,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import axios from "axios";
 import { useQuery } from "react-query";
-import Loading from "../Loading/Loading";
 import { Link } from "react-router-dom";
 
 export default function CategoriesSlider() {
@@ -13,8 +12,7 @@ export default function CategoriesSlider() {
         return axios.get('https://ecommerce.routemisr.com/api/v1/categories')
     }
 
-    const { data, isLoading } = useQuery('getAllCategories', getAllCategories)
-    // console.log(data);
+    const { data } = useQuery('getAllCategories', getAllCategories)
     var settings = {
         dots: true,
         infinite: true,
@@ -49,9 +47,6 @@ export default function CategoriesSlider() {
             }
           ]
     };
-    // if (isLoading) {
-    //     return <Loading />
-    // }
     return <>
     <div className="container">
     

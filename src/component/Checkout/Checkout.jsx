@@ -1,5 +1,4 @@
 import axios from 'axios'
-import { useFormik } from 'formik'
 import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { myCartContext } from '../../Context/CartContext'
@@ -33,7 +32,6 @@ function payWithCash(){
     nav('/home')
   })
   .catch((err)=>{
-// console.log(payment,'error');
 toast.success('an error has occurred',{position:'top-center'})
 
   })

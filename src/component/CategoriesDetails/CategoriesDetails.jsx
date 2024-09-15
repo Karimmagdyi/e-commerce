@@ -2,7 +2,6 @@ import axios from 'axios'
 import React, { useContext } from 'react'
 import { useQuery } from 'react-query'
 import { Link, useParams } from 'react-router-dom'
-import ProductDetails from '../ProductDetails/ProductDetails'
 import Loading from '../Loading/Loading'
 import { myCartContext } from '../../Context/CartContext'
 import toast from 'react-hot-toast'
@@ -20,7 +19,6 @@ export default function CategoriesDetails() {
         }
     }
    const {id}=useParams()
-//    console.log(id);
     function getCategoriesDetails() {
         return axios.get(`https://ecommerce.routemisr.com/api/v1/products`)
     }

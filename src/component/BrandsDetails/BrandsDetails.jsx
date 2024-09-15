@@ -34,7 +34,7 @@ export default function BrandsDetails() {
   return <>
   <div className="container">
     <div className="row">
-       {filtered.map((item,index)=> <div key={index} className='col-md-3'>
+       {filtered.map((item,index)=> <div key={index} className='col-6 col-md-3'>
         <div className="product">
         <Link to={`/ProductDetails/${item._id}`}>
             <img className='w-100' src={item.imageCover} alt="" />

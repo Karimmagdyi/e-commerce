@@ -17,7 +17,7 @@ export default function Brands() {
   return <>
    <div className="container mt-60">
     <div className="row gy-3">
-          {data.data.data.map((val,index)=> <div key={index} className=" col-sm-6 col-md-3">
+          {data.data.data.map((val,index)=> <div key={index} className=" col-6 col-md-3">
         <Link to={`/BrandsDetails/${val._id}`}>
         <div className="brand bran text-center">
            <img className='w-75' src={val.image} alt="" />
@@ -25,7 +25,6 @@ export default function Brands() {
         </div>
         </Link>
       </div>)}
-        
     </div>
    </div>
   </>

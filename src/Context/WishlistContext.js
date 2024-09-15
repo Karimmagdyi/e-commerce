@@ -18,10 +18,11 @@ import { mycontext } from "./Context"
     headers:{token:localStorage.getItem('tkn')}
   })
   .then((res)=>{
-    console.log('kakak',res.data.data);
+    console.log('wishlist item',res.data.data);
     localStorage.setItem('wish',res.data.data)
     setWishPro(res.data.data)
     getWishlist()
+    setWishCount(((prev)=>++prev))
     return true
   })
   .catch((err)=>{
@@ -37,7 +38,7 @@ import { mycontext } from "./Context"
     .then((res)=>{
       console.log('wishlist items', res.data);
      setWishlist(res.data)
-    
+     setWishCount(res.data.count)
  })
     .catch((err)=>{
          console.log('errrrrrrrr',err);
@@ -50,8 +51,10 @@ import { mycontext } from "./Context"
   }})
   .then((res)=>{
     console.log('removed wishlist',res.data);
+    localStorage.setItem('wish',res.data.data)
     getWishlist()
     setWishPro(res.data.data)
+    setWishCount(re.data.count)
     return true
   })
   .catch((err)=>{

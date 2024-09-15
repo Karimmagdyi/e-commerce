@@ -1,9 +1,8 @@
 import { useFormik } from 'formik'
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import * as yup from'yup'
 import axios from 'axios'
-import Navbar from '../Navbar/Navbar'
-import Register from '../Register/Register'
+
 import { mycontext } from '../../Context/Context'
 import { Link, useNavigate } from 'react-router-dom'
 
@@ -22,7 +21,6 @@ export default function Login() {
         console.log(token);
     })
    .catch((response)=>{
-    // console.log(response.response.data.message);
     setResponse(response.response.data.message)
    })
   }

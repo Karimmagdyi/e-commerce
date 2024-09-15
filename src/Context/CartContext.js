@@ -1,7 +1,6 @@
 import axios from 'axios'
 import React, { createContext, useContext, useEffect, useState } from 'react'
 import { mycontext } from './Context'
-import { useQuery } from 'react-query'
 
 export  const myCartContext= createContext()
 

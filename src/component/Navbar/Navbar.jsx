@@ -7,7 +7,7 @@ import { myCartContext } from '../../Context/CartContext'
 import { MyWishListContext } from '../../Context/WishlistContext'
 export default function Navbar() {
   const { count } = useContext(myCartContext)
-  const { wishlist } = useContext(MyWishListContext)
+  const { wishlist,wishCount } = useContext(MyWishListContext)
   // console.log(wishlist);
   const navigate = useNavigate()
   function Logout() {
@@ -15,20 +15,16 @@ export default function Navbar() {
     setToken(null)
     navigate('/login')
   }
-  const { counter, setToken } = useContext(mycontext)
+  const { setToken } = useContext(mycontext)
   return <>
 
     <nav className="navbar navbar-expand-lg bg-body-tertiary position-fixed top-0 end-0 start-0 mb-5 z-3 py-3">
-      <div className="container-fluid">
-        
+      <div className="container-fluid d-flex justify-content-between">
+        <div className='navImage d-flex'>
         <Link to={'/home'}>
         <img src={logo} alt="" />
         </Link>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon" />
-        </button>
-        <div className="d-flex align-items-center iconss ">
-          
+        <div className="d-flex align-items-center iconss ">  
         {localStorage.getItem('tkn') !== null ? (
               count !== 0 ? (
                 <li className="nav-item position-relative list-unstyled mx-3 cart">
@@ -46,7 +42,9 @@ export default function Navbar() {
             ) : (
               ''
             )}`
-        {localStorage.getItem('tkn') != null ? <> <Link to={'/Wishlist'}>
+        {localStorage.getItem('tkn') != null ? (
+          wishCount>0?(
+         <Link to={'/Wishlist'}>
               <li className='nav-item position-relative text-decoration-none list-unstyled wish'>
                 <i className="fa-regular fa-heart fa-xl px-md-3"></i>
                 <span className=" translate-middle badge rounded-pill bg-main text-white wishIcon">
@@ -55,11 +53,17 @@ export default function Navbar() {
                 </span>
               </li>
             </Link>
+        ) 
+          :<>
+          <Link to={'/Wishlist'}>      
+          <li className='nav-item position-relative text-decoration-none list-unstyled wish'>
+                <i className="fa-regular fa-heart fa-xl px-md-3"></i></li>
+          </Link>
+          </>    
+        )
+          : ''}
           
-             
-            </>
-              : ''}
-          
+        </div>
         </div>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           {localStorage.getItem('tkn') != null ? <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
@@ -80,13 +84,6 @@ export default function Navbar() {
               <NavLink className="nav-link" to="/allorders">allorders</NavLink>
             </li>
           </ul> : ''}
-          
-         
-
-          
-        
-
-
               <ul>
             <div className="d-flex intro ">
 
@@ -107,6 +104,11 @@ export default function Navbar() {
             
           {/* </ul> */}
           </div>
+          <div className='navDropdown'>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon" />
+        </button>
+        </div>
       </div>
       
     </nav>

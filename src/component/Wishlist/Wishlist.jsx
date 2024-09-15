@@ -4,18 +4,11 @@ import axios from 'axios'
 import { useQuery } from 'react-query'
 import Loading from '../Loading/Loading'
 import toast from 'react-hot-toast'
-import { useEffect } from 'react'
+
 
 export default function Wishlist() {
 
-
-
-
-
-  const {wishlist,removeWishlist,getWishlist}=useContext(MyWishListContext)
-  // useEffect(()=>{
-  //   getWishlist()
-  // },[])
+  const {wishlist,removeWishlist}=useContext(MyWishListContext)
   console.log(wishlist);
  
 async function removeItem(id){
@@ -32,7 +25,7 @@ async function removeItem(id){
 function getAllProducts() {
   return axios.get('https://ecommerce.routemisr.com/api/v1/products')
 }
-const { data, error, isLoading } = useQuery('getAllProducts', getAllProducts)
+const { data } = useQuery('getAllProducts', getAllProducts)
 console.log('kkkk',data);
 const filtered=data?.data.data.filter(item=> wishlist.data?.includes(item._id))
 console.log('wish data',filtered);

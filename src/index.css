@@ -10,6 +10,8 @@
 
 body{
     font-family: var(--font-family) !important;
+    background-color: #F8F9FA;
+
 }
 .rating-color
 {
@@ -78,7 +80,8 @@ a , a:hover{
     z-index: -1;
 }
 .cartItem{
-    background-color: #F8F9FA;
+    background-color: #FFF;
+    width: 100%;
 }
 .active{
     background-color: var(--main-color);
@@ -91,10 +94,7 @@ a , a:hover{
 .ms-6{
     margin-left: 67px;
 }
-/* .icons:hover{
-   background-color: #0D6EFD;
-   color: #fff !important;
-} */
+
 .bg-muted{
     background-color: #F8F9FA;
 }
@@ -116,65 +116,23 @@ a , a:hover{
 .m-200{
     margin-top: 150px !important;
 }
-.wish-pro{
+.wishPro{
     border-bottom: 8px solid #fff;
-    
+    /* min-width: fit-content !important; */
 }
 .mt-70{
 margin-top: -70px!important;
 }
-@media screen and (min-width:316px) and (max-width:430px) {
-.iconss{
-    margin-left: 140px !important;
-    margin-top: -47px;
-}
-.product{
-    
-    
-}
-.logout{
-    
-}
-}
+
+
 @media screen and(min-width:431px) and (max-width: 576px) {
     .category h3{
       font-size: 8px;
     }
-    .category{
-        /* padding-inline: 20px; */
-    }
-    .wish{
-      
-       /* margin-top: -60px; */
-       
-    }
-    .cart{
-        
-       
-        /* margin-top: 0px;
-        margin-left: 20px; */
-    } 
     .footer-btn{
         margin-top: 20px; 
     }
-    .logout{
-        /* margin-top: -70px;
-        margin-left: 220px; */
-        /* margin-right: 20px; */
-    }
-    .iconss{
-        /* margin-top: -200px; */
-        margin-top: -30px ;
-        display: inline-block;
-        margin-left: 150px !important ;
-        padding-inline: 20px;
-    }
 }
-    @media screen and (min-width:577px) and (max-width:715px) {
-        .iconss{
-            margin-left:  200px ;
-        }
-    }
   
   @media screen and (min-width:716px) and (max-width:786px) {
 
@@ -192,15 +150,7 @@ margin-top: -70px!important;
     .footer-btn{
         margin-top: 20px; 
     }
-    .iconss{
-        margin-left: 300px  ;
-    }
+  
     
   }
   
-@media screen and (min-width:787px) and ( max-width: 850px){
-    .iconss{
-margin-left: 300px  ;
-
-    }
-}

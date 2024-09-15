@@ -14,7 +14,6 @@ export default function ProductDetails() {
     const {id}= useParams()
    const{getCartProduct}=  useContext(myCartContext)
  const{inc,dec} = useContext(mycontext)
-    // console.log(id);
 
    async function addToCart(id){
     await  getCartProduct(id)

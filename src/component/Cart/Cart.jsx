@@ -34,72 +34,68 @@ async function removeFromCart(productId){
 
   }
 }
+  
 
-// function onlinePayment(){
-//   axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=http://localhost:3000`,shipping,{
-//     headers:{
-//       token:localStorage.getItem('tkn')
-//     }
-//   })
-//   .then((res)=>{
-//    window.location.href = res.data.url;
-//   })
-//   .catch(()=>{
-
-//   })
-// }
-{/* <h2>Shop Cart:</h2>
-  <p className='text-main'>Total cart price : {totalCart}</p> */}
-  if(!allProducts){
-    return <Loading/>
-  }
   return <>
-<div className="container mt-60 cartItem">
- <div className="row">
-  <div className="col-8">
+  <div className="col-12 mt-60">
+    <div className='paymentContainer d-flex justify-content-end mt-3'>
+   <Link to={'/Checkout'} >
+     <button className='btn btn-success me-3'>Cash On Deliverey</button>
+   </Link>
+
+    <Link to={'/OnlinePayment'}>
+    <button className='btn btn-success ms-3'>Debit/Credit Card</button>
+    </Link> 
+
+    </div>
+  </div>
+  <div className=''>
+<div className="container mt-3">
+ <div className="row gy-3">
+  <div className="col-12">
 <div className="details">
 <h2>Shop Cart:</h2>
   <p className='text-main'>Total cart price : {totalCart}</p>
 </div>
   </div>
-  <div className="col-2">
-<div className="icons d-flex flex-column">
-   <Link to={'/Checkout'} >
-   <i className="fa-solid fa-money-bill fa-xl ms-6"></i>
-     <button className='btn btn-outline-primary'>Cash On Deliverey</button>
-   </Link>
-</div>
-  </div>
-  <div className="col-2">
-    <div className="icon ms-4">
-    <Link to={'/OnlinePayment'}>
-    <i className="fa-solid fa-credit-card fa-lg ms-6"></i>
-    <button className='btn btn-outline-primary'>Debit/Credit Card</button>
-    </Link> 
-    </div>
-  </div>
- </div>
-    {allProducts?.map((items,idx)=> <div key={idx} className="row wish-pro align-items-center">
-    <div className="col-2">
+
+    {allProducts?.map((items,idx)=><>   
+      <div key={idx} className="col-12 col-md-6">
+    <div className="d-flex justify-content-between">
+      <div className='leftSide d-flex'>
     <figure>
-      <img className='w-100' src={items?.product.imageCover} alt="" />
+      <img width={100} className='' src={items?.product.imageCover} alt="" />
     </figure>
-    </div>
-    <div className="col-8">
+    <div className="ps-3">
      <p>{items?.product.title}</p>
      <p className='text-main'>price: {items?.price}</p>
      <button onClick={()=>{removeFromCart(items.product._id)}} className='btn btn-outline-danger'>Remove</button>
     </div>
-    <div className="col-2">
-     <div className='d-flex'>
+      </div>
+
+      <div className='rightSide'>
+    <div className="">
+     <div className='d-flex justify-content-center'>
      <button onClick={()=>{update(items.product._id,items.count + 1)}} className='btn btn-outline-success'>+</button>
      <span className='mx-2'>{items?.count}</span>
      <button disabled={items.count==1} onClick={()=>{update(items.product._id,items.count - 1)}} className='btn btn-outline-success'>-</button>
      </div>
     </div>
-  </div> )}
+      </div>
+    </div>
+  <div className='row pt-2'>
+  </div>
+  </div>
+    </>
+)}
+ </div>
+
+</div>
+
   
 </div>
+  {/* </div> */}
+
     
 </>
 }
