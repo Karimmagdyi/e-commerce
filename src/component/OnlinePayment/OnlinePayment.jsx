@@ -6,7 +6,7 @@ import { myCartContext } from '../../Context/CartContext'
 import toast from 'react-hot-toast'
 
 export default function OnlinePayment() {
- const{cartId,cartItems}= useContext(myCartContext)
+ const{cartId}= useContext(myCartContext)
    const nav=useNavigate()
   const shipping=  {
     "shippingAddress":{

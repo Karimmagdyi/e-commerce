@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import logo from '../../images/freshcart-logo.svg'
-import { Link, NavLink, Navigate, useNavigate } from 'react-router-dom'
-import Cart from '../Cart/Cart'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { mycontext } from '../../Context/Context'
 import { myCartContext } from '../../Context/CartContext'
 import { MyWishListContext } from '../../Context/WishlistContext'
@@ -79,9 +78,6 @@ export default function Navbar() {
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/brands">brands</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/allorders">allorders</NavLink>
             </li>
           </ul> : ''}
               <ul>

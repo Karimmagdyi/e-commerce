@@ -1,21 +1,19 @@
-import React, { useContext, useEffect, useState } from 'react'
-import axios, { Axios } from 'axios'
+import React, { useContext, useState } from 'react'
+import axios from 'axios'
 import { useQuery } from 'react-query'
-import { CirclesWithBar } from 'react-loader-spinner'
-import Loading from '../Loading/Loading'
-import { Link, Navigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { myCartContext } from '../../Context/CartContext'
 import toast from 'react-hot-toast'
 import { MyWishListContext } from '../../Context/WishlistContext'
+
 export default function Products() {
 
-  const{addToWishlist,wishlist,removeWishlist,wishPro}=useContext(MyWishListContext)
- const [proColor, setproColor] = useState('#212529')
+  const{addToWishlist,removeWishlist,wishPro}=useContext(MyWishListContext)
+ const [ setproColor] = useState('#212529')
  function changeColor(){
   setproColor('#FF0000')
  }
  async function addWish(id){
-  console.log('Adding to wishlist:', id);
    await addToWishlist(id)
    if(addToWishlist){
      toast.success('added successfully',{position:'bottom-left'})
@@ -50,11 +48,9 @@ export default function Products() {
   function getAllProducts() {
     return axios.get('https://ecommerce.routemisr.com/api/v1/products')
   }
-  const { data, isLoading } = useQuery('getAllProducts', getAllProducts)
-  if (isLoading) {
-    return <Loading/>
-  }
-console.log('wishlist pro',wishlist);
+  const { data } = useQuery('getAllProducts', getAllProducts)
+
+
   const isProductInWishlist = (productId) => wishPro.includes(productId);
 
 
@@ -83,7 +79,6 @@ console.log('wishlist pro',wishlist);
           </Link>
             <div className="d-flex justify-content-center">
             <button onClick={()=>addProduct(product._id)} className='btn bg-main w-75 text-white text-center'> add to cart</button>
-            {/* <i  onClick={()=>addProduct(product._id)} className="fa-solid fa-cart-plus fa-xl btn "></i> */}
             </div>
           </div>
         </div>)}

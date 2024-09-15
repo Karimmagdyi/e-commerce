@@ -1,6 +1,5 @@
 import axios from "axios"
-import { Children, createContext, useContext, useEffect, useState,  } from "react"
-import { json } from "react-router-dom"
+import { createContext, useContext, useEffect, useState  } from "react"
 import { mycontext } from "./Context"
 
  export const MyWishListContext=createContext()
@@ -36,7 +35,6 @@ import { mycontext } from "./Context"
       headers:{token:localStorage.getItem('tkn')}
     })
     .then((res)=>{
-      console.log('wishlist items', res.data);
      setWishlist(res.data)
      setWishCount(res.data.count)
  })

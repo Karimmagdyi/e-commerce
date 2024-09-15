@@ -1,5 +1,4 @@
 import { createContext, useEffect, useState } from "react"
-import Navbar from "../component/Navbar/Navbar"
 
 export const mycontext = createContext()
 

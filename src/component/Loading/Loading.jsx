@@ -6,7 +6,7 @@ export default function Loading() {
 
   return <>
   
-  <div className="w-100 h-100 position-absolute bg-info d-flex justify-content-center align-items-center z-3">
+  <div className="w-100 h-100 position-absolute bg-dark d-flex justify-content-center align-items-center z-3">
   <CirclesWithBar
         height="100"
         width="100"

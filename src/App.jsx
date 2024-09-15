@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from './component/Navbar/Navbar'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Layout from './component/Layout/Layout'
 import Products from './component/Products/Products'
@@ -21,7 +20,6 @@ import Checkout from './component/Checkout/Checkout.jsx'
 import OnlinePayment from './component/OnlinePayment/OnlinePayment.jsx'
 import Wishlist from './component/Wishlist/Wishlist.jsx'
 import { WishlistContext } from './Context/WishlistContext.js'
-import {ReactQueryDevtools} from  "react-query/devtools"
 import AllOrders from './component/AllOrders/AllOrders.jsx'
 import ForgetPassword from './component/ForgetPassword/ForgetPassword.jsx'
 import VerficationCode from './component/VerficationCode/VerficationCode.jsx'

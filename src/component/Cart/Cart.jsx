@@ -1,13 +1,11 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 import { myCartContext } from '../../Context/CartContext'
-import Loading from '../Loading/Loading';
 import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 
 
 export default function Cart() {
- const{cartItems,allProducts,count,totalCart,updateCount,removeProduct,cartId}=useContext(myCartContext)
+ const{allProducts,totalCart,updateCount,removeProduct}=useContext(myCartContext)
 console.log(allProducts);
 
 
@@ -38,7 +36,7 @@ async function removeFromCart(productId){
 
   return <>
   <div className="col-12 mt-60">
-    <div className='paymentContainer d-flex justify-content-end mt-3'>
+    {totalCart!==0?<div className='paymentContainer d-flex justify-content-end mt-3'>
    <Link to={'/Checkout'} >
      <button className='btn btn-success me-3'>Cash On Deliverey</button>
    </Link>
@@ -47,7 +45,7 @@ async function removeFromCart(productId){
     <button className='btn btn-success ms-3'>Debit/Credit Card</button>
     </Link> 
 
-    </div>
+    </div>:''}
   </div>
   <div className=''>
 <div className="container mt-3">

@@ -1,4 +1,4 @@
-import axios, { Axios } from 'axios'
+import axios from 'axios'
 import React, { useContext } from 'react'
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom'
@@ -28,13 +28,12 @@ export default function ProductDetails() {
     function getProductDetails(){
       return  axios.get(`https://ecommerce.routemisr.com/api/v1/products/${id}`)
     }
-  const{data,isLoading,isError,error}=   useQuery(`getProductDetails-${id}`,getProductDetails)
+  const{data,isLoading}=   useQuery(`getProductDetails-${id}`,getProductDetails)
   const  product = data?.data.data;
-  // console.log(product);
+
 if (isLoading) {
     return <Loading/>;
 }
-// console.log(data.data.data.images);
 var settings = {
     dots: true,
     infinite: true,
@@ -43,7 +42,7 @@ var settings = {
     slidesToScroll: 1,
     autoplay:true,
 };
-// if (isError) return {<div>{error.message}</div>;}
+
   return <>
   <div className="container">
     <div className="row align-items-center mt-5">
