@@ -52,7 +52,7 @@ import { mycontext } from "./Context"
     localStorage.setItem('wish',res.data.data)
     getWishlist()
     setWishPro(res.data.data)
-    setWishCount(re.data.count)
+    setWishCount(res.data.count)
     return true
   })
   .catch((err)=>{
