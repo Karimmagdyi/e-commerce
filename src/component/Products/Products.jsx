@@ -9,7 +9,7 @@ import { MyWishListContext } from '../../Context/WishlistContext'
 export default function Products() {
 
   const{addToWishlist,removeWishlist,wishPro}=useContext(MyWishListContext)
- const [ setproColor] = useState('#212529')
+ const [ proColor,setproColor] = useState('#212529')
  function changeColor(){
   setproColor('#FF0000')
  }
